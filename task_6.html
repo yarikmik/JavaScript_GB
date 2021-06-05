@@ -1,0 +1,62 @@
+<!-- /*
+6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), 
+где arg1, arg2 – значения аргументов, operation – строка с названием операции. 
+В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).
+*/ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                
+        function fnSumm(a, b){
+            return alert(`Сумма ${a} и ${b} = ${(a+b)}`);
+        }
+
+        function fnDiff(a, b){
+            return alert(`Разница ${a} и ${b} = ${(a-b)}`);
+        }
+
+        function fnMulti(a, b){
+            return alert(`Умножение ${a} и ${b} = ${(a*b)}`);
+        }
+
+        function fnDiv(a, b){
+            return alert(`Деление ${a} и ${b} = ${(a/b)}`);
+        }
+
+        function mathOperation(arg1, arg2, operation){
+
+            switch (operation.toLowerCase()){
+                case 'sum': 
+                case 'сложить': 
+                case 'сумма': return fnSumm(arg1,arg2);
+                case 'diff': 
+                case 'вычесть': 
+                case 'вычитание': return fnDiff(arg1,arg2);
+                case 'multi': 
+                case 'умножить': 
+                case 'умножение': return fnMulti(arg1,arg2);
+                case 'div': 
+                case 'делить': 
+                case 'деление': return fnDiv(arg1,arg2);
+                default:
+                    alert('не правильное действие');
+                    break;
+            }
+        }
+        const arg1 = parseInt(prompt('Введите первое значение:'));
+        const arg2 = parseInt(prompt('Введите второе значение:'));
+        const operation = prompt(`Что надо сделать с ${arg1} и ${arg2} ?`);
+        mathOperation(arg1, arg2, operation)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2   префиксный инкремент, c присвоено значение увеличенного на +1 a
+        d = b++; alert(d);           // 1   постфиксный инкремент, d сначала присвоено значение b, затем увеличение b на +1
+        c = (2+ ++a); alert(c);      // 5    ++a = 3, +2  итого 5
+        d = (2+ b++); alert(d);      // 4    b уже равно 2, еще одно b++ = 2 (постфиксный инкремент и b станет +1 после), +2 итого 4
+        alert(a);                    // 3   фниальное a = 3
+        alert(b);                    // 3   фниальное b = 3
+    </script>
+</body>
+</html>

@@ -5,37 +5,37 @@ console.log("Сгенерированное число = ", num);
 console.log('\n');
 switch (num) {
     case 0:
-        console.log(0);
+        console.log(num++);
     case 1:
-        console.log(1);
+        console.log(num++);
     case 2:
-        console.log(2);
+        console.log(num++);
     case 3:
-        console.log(3);
+        console.log(num++);
     case 4:
-        console.log(4);
+        console.log(num++);
     case 5:
-        console.log(5);
+        console.log(num++);
     case 6:
-        console.log(6)
+        console.log(num++)
     case 7:
-        console.log(7);
+        console.log(num++);
     case 8:
-        console.log(8);
+        console.log(num++);
     case 9:
-        console.log(9);
+        console.log(num++);
     case 10:
-        console.log(10);
+        console.log(num++);
     case 11:
-        console.log(11);
+        console.log(num++);
     case 12:
-        console.log(12);
+        console.log(num++);
     case 13:
-        console.log(13);
+        console.log(num++);
     case 14:
-        console.log(14)
+        console.log(num++)
     case 15:
-        console.log(15);
+        console.log(num);
         break;
     default:
         console.log('Что то пошло не так');

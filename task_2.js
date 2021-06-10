@@ -5,6 +5,14 @@ a) Организовать такой массив для хранения то
 b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
 */
 
-let productList = [['флешка','2','500'],['мышка','1','250'],['коврик','4','95']]
+let productList = [['флешка','2','500'],['мышка','1','250'],['коврик','4','95'],['монитор','1','1250']]
 
-function countBasketPrice(list)
+function countBasketPrice(list){
+    let summ = 0
+    for(const value of list){
+        summ += value[1]*value[2]
+    }
+    return summ
+}
+
+console.log('Сумма товаров в корзине: ',countBasketPrice(productList));

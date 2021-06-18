@@ -1,0 +1,47 @@
+table {
+    padding: 100px 100px 100px 100px;
+    counter-reset: numbers_right numbers_left simbols_top simbols_bot;
+
+}
+
+td {
+    border: 1px solid;
+    height: 40px;
+    width: 40px;
+}
+
+.light {
+    background-color: #CCCFE5;
+}
+
+.dark {
+    background-color: #000640;
+}
+
+.numbers_right::before{
+    position: relative;
+    left: 50px;
+    counter-increment: numbers_right;
+    content: counter(numbers_right);
+
+}
+
+.numbers_left::before{
+    position: relative;
+    right: 25px;
+    counter-increment: numbers_left;
+    content: counter(numbers_left);
+}
+
+.simbols_top::after{
+    position: relative;
+    bottom: 40px;
+    counter-increment: simbols_top;
+    content: counter(simbols_top, upper-alpha);
+}
+.simbols_bot::after{
+    position: relative;
+    top: 40px;
+    counter-increment: simbols_bot;
+    content: counter(simbols_bot, upper-alpha);
+}

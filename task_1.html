@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+
+        const settings = {
+            rowCount: 8,
+            colCount: 8,
+        };
+        
+        function ChessBoard() {
+            let tableElem = document.createElement('table');
+            document.body.appendChild(tableElem);
+
+            for (let row = 0; row < settings.rowCount; row++){
+                const tr = document.createElement('tr');
+                tableElem.appendChild(tr);
+
+                for (let col = 0; col < settings.colCount; col++){
+                    const td = document.createElement('td');
+                    tr.appendChild(td);
+                    // Расставляем классы для цвета клеток
+                    if (row%2 == col%2) {
+                        td.classList.add("light");
+                    } else {
+                        td.classList.add("dark");
+                    }
+
+                    // Расставляем классы для нумерных ячеек
+                    switch (row){
+                        case 0: td.classList.add('simbols_top'); break;
+                        case settings.rowCount -1: td.classList.add('simbols_bot'); break;
+                    }
+
+                    // Расставляем классы для символьных ячеек
+                    if ((col-7)%8 == 0){
+                        td.classList.add('numbers_right')
+                    }
+                    if (col%8 == 0){
+                        td.classList.add('numbers_left')
+                    }
+
+
+                }
+
+            }
+        }
+
+        ChessBoard()
+    </script>
+</body>
+</html>

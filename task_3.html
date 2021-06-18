@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='catalog'></div>
+    <script>
+        const Product = {
+            goods: [
+                {
+                id_product: 123,
+                product_name: "Ноутбук",
+                price: 45600,
+
+                },
+                {
+                id_product: 456,
+                product_name: "Мышка",
+                price: 1000,
+
+                },
+                {
+                id_product: 456,
+                product_name: "Флешка",
+                price: 500,
+
+                },
+            ],
+
+        };
+        let text = '';
+        let count = 1;
+        for(const value of Product.goods){
+            
+            text += `Товар № ${count}: \n`;
+            text += `<p>Наименование: ${value.product_name}</br>Цена: ${value.price} у.е</br>******************</p></br>`;
+            count++;
+        };
+        
+        let productToCatalog = document.querySelector('#catalog');
+        console.log(text);
+        productToCatalog.innerHTML += text;
+
+    </script>
+</body>
+</html>
